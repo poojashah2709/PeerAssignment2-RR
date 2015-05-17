@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2f6175086afc6bcbe2992f2fc9ec57b320e61b64
 ---
 title: "Reproducible Research Peer Assignment1"
 author: "Pooja Shah"
@@ -94,7 +98,11 @@ The mean is the same because mean was used to fill the values for NAs. Median wi
 
 ###Are there differences in activity patterns between weekdays and weekends?
 
+<<<<<<< HEAD
 1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
+=======
+1. Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
+>>>>>>> 2f6175086afc6bcbe2992f2fc9ec57b320e61b64
 
 ```{r WeekdayWeekend}
 activityModified$dayType = ifelse(as.POSIXlt(as.Date(activityModified$date))$wday%%6 == 0, "weekend", "weekday")
@@ -107,4 +115,8 @@ activityModified$dayType = factor(activityModified$day, levels = c("weekday", "w
 stepsInterval2 = aggregate(steps ~ interval + dayType, data=activityModified, FUN=mean)
 library(lattice)
 xyplot(steps ~ interval | factor(dayType), data = stepsInterval2, aspect = 1/2, type = "l")
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 2f6175086afc6bcbe2992f2fc9ec57b320e61b64
