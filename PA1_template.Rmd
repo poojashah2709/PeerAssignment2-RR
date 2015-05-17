@@ -115,8 +115,4 @@ activityModified$dayType = factor(activityModified$day, levels = c("weekday", "w
 stepsInterval2 = aggregate(steps ~ interval + dayType, data=activityModified, FUN=mean)
 library(lattice)
 xyplot(steps ~ interval | factor(dayType), data = stepsInterval2, aspect = 1/2, type = "l")
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> 2f6175086afc6bcbe2992f2fc9ec57b320e61b64
